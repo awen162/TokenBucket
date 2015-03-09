@@ -1,0 +1,72 @@
+Documentation for Warmup Assignment 2
+=====================================
+
++-------+
+| BUILD |
++-------+
+
+Comments: In order to generate executable warmup2, you should type "make" under the directory which contained all the required files (Makefile, my402list.c, my402list.h, cs402.h, warmup2.c).
+Comments: There is no warning or error messages executing "make" when I tried in my account on nunki.
+
+
++---------+
+| GRADING |
++---------+
+
+Basic running of the code : 
+My code can run all the 20 trials properly.
+
+Missing required section(s) in README file : Include all required parts in this README file.
+Cannot compile : can compile properly.
+Compiler warnings : No warnings.
+"make clean" : Can remove all *.o and executable files
+Segmentation faults : No.
+Separate compilation : I used sepearte compilation lines in the Makefile.
+Using busy-wait : Didn't use busy-wait in my program.
+Handling of commandline arguments:
+    1) -n : can handle -n equals to 1, 2, 3.
+    2) -lambda : can handle -lambda equals to 0.001, 1, 1000.
+    3) -mu : can handle -mu equals to 0.001, 1, 1000.
+    4) -r : can handle -r equals to 0.001, 1, 1000.
+    5) -B : can handle -B equals to 1, 1000, 1000000.
+    6) -P : can handle -P equals to 1, 1000, 1000000.
+Trace output :
+    1) regular packets: print exactly 6 lines and contain correct info for each packet. 
+    2) dropped packets: print exactly 1 lines and contain correct info for each packet.
+    3) removed packets: print exactly 1 lines and contain correct info for each packet.
+    4) token arrival (dropped or not dropped): print exactly 1 lines and contain correct info for each packet.
+Statistics output :
+    1) inter-arrival time : right.
+    2) service time : right.
+    3) number of customers in Q1 : right.
+    4) number of customers in Q2 : right.
+    5) number of customers at a server : right.
+    6) time in system : right.
+    7) standard deviation for time in system : right.
+    8) drop probability : right.
+Output bad format : right format as described in the spec.
+Output wrong precision for statistics (should be 6-8 significant digits) : contain 6 significant digits.
+Large service time test : pass this test.
+Large inter-arrival time test : pass this test.
+Tiny inter-arrival time test : pass this test.
+Tiny service time test : pass this test.
+Large total number of customers test : pass this test and react correctly when press ctrl+c.
+Large total number of customers with high arrival rate test : pass this test and react correctly when press ctrl+c.
+Dropped tokens test : the dropped tokens probability changes according to different lambda.
+Cannot handle <Cntrl+C> at all (ignored or no statistics) : can handle ctrl c correctly.
+Can handle <Cntrl+C> but statistics way off : the statistics are right when press ctrl c.
+Not using condition variables and do some kind of busy-wait : used condition variables and without busy-wait.
+Synchronization check : use mutex and condition variable for synchronization purpose.
+Deadlocks : no deadlocks when I test.
+
++------+
+| BUGS |
++------+
+
+No bugs when I run the program.
+
++-------+
+| OTHER |
++-------+
+
+This part is remained to blank on purpose.
